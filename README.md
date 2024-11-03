@@ -7,17 +7,20 @@ Steam, una plataforma multinacional de videojuegos, busca mejorar la experiencia
 
 Al analizar el contexto y la solicitud del cliente, se procede a revisar los datasets entregados y se realizan los siguientes pasos.
 
-1. **Transformaciones**: En el notebook EDA se realiza los analisis de datos y la informacion sobre la distribucion de los mismos. en el ETL se realizan las trasnformaciones de los datos para el analsis de sentimientos y el sistema de recomendacion se eliminan columnas innecesarias del dataset y optimiza el rendimiento del modelo y de la API. se exportan archivos parquet para disminuir el peso del dataset. 
-  
-2. **Analsis de sentimiento**: Crea la columna `sentiment_analysis` en el dataset `user_reviews` utilizando análisis de sentimiento. se realiza con VaderSentiment el cual me funciono y dio el resultado esperado.
+1. **Transformaciones:** En el notebook de Exploración de Datos (EDA), se realizan análisis de los datos de las 3 bases de datos y se proporciona información sobre su distribución. En la etapa de ETL, se llevan a cabo las transformaciones necesarias en los datos para el análisis de sentimientos y el sistema de recomendación. Esto optimiza tanto el rendimiento del modelo como el de la API. Además, se exportan archivos en formato Parquet para reducir el tamaño del dataset.
+![Código](imagen/Captura_transf)
 
-3. **Desarrollo de API**: Implementa una API RESTful utilizando FastAPI con las siguientes funciones:
-    Se realizan las 5 funciones en el archivo main.py incluido los dos tipos de recomendaciones item_item y user_item a traves de la similitud del coseno ver archivo "sistema de recomendacion"
-    para mi fortuna todas las funciones a nivel local eran productivas.
+2. **Machine Learning:** Se lleva a cabo un análisis de sentimiento en el archivo user_reviews utilizando la biblioteca VaderSentiment. Como resultado de este análisis, se genera la columna sentiment_analysis en el dataset user_reviews.
+![Código](imagen/Captura_Codigo_ana.png)
+![Resultado](imagen/Captura_Analisis.png)
 
-    ![alt text](<Captura de Pantalla 2024-10-15 a la(s) 5.59.33 p.m.-1.png>)
 
-4. **Deployment**: Despues de dias de intentar deployar la API, fue imposible multiples errores me lo impidieron, trate de solucionarlo todo pero no fue posible, cuando una funcion parecio deployarse me aparecio un mensaje de falta de memoria del github, el cual trate de solucionar comprando mas memoria y haciendo otro repositorio pero no funciono. Incluso este README no alcanzo a hacer adherirse al repositorio.
- ![alt text](<Captura de Pantalla 2024-10-15 a la(s) 5.59.33 p.m.-1.png>)
+1. **Desarrollo de API:** Se implementa una API RESTfull utilizando FastAPI, que incluye 7 funciones en el archivo main.py. Las dos últimas funciones abarcan dos tipos de recomendaciones: item-item y user-item, basadas en la similitud del coseno, como se detalla en el archivo "sistema de recomendación". 
+Se crea un entorno virtual para probar la API localmente 
+![Imagen](imagen/Captura_fastapi.png)
+![Imagen](imagen/Captura_api_local.png)
 
-Fue una experiencia enriquesedora y frustrante por que no pude lograr mi objetivo deployar lo logrado.
+
+2. **Deployment**: 
+
+

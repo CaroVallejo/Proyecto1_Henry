@@ -1,0 +1,12 @@
+# Ignorar archivos de caché de Python
+__pycache__
+*.pyc
+*.pyo
+
+# Ignorar la carpeta de Git
+.git
+
+# Ignorar archivos y carpetas innecesarios
+.env
+.DS_Store
+.vscode
